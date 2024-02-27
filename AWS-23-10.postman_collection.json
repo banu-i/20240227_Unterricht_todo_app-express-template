@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "cf32ae78-80a5-4f9d-beea-e8cebf500b56",
+		"_postman_id": "ce2dc593-8131-4db2-aec2-e5224e88ec3f",
 		"name": "AWS-23-10",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "31079502"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31478675",
+		"_collection_link": "https://crimson-sunset-423164.postman.co/workspace/my-workspace-techstarter-aws-23~76acf065-39e3-4fff-a4d2-6da3acc62182/collection/31478675-ce2dc593-8131-4db2-aec2-e5224e88ec3f?action=share&source=collection_link&creator=31478675"
 	},
 	"item": [
 		{
@@ -11,19 +12,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": {
-					"raw": "http://localhost:5050/v1/todos/all",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"v1",
-						"todos",
-						"all"
-					]
-				}
+				"url": "http://localhost:5050/v1/todos/all"
 			},
 			"response": []
 		},
@@ -55,6 +44,33 @@
 			"response": []
 		},
 		{
+			"name": "Todo-ByUserId",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5050/v1/todos/byuserid?userId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5050",
+					"path": [
+						"v1",
+						"todos",
+						"byuserid"
+					],
+					"query": [
+						{
+							"key": "userId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Create-Todo",
 			"request": {
 				"method": "POST",
@@ -68,19 +84,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:5050/v1/todos/create",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"v1",
-						"todos",
-						"create"
-					]
-				}
+				"url": "http://localhost:5050/v1/todos/create"
 			},
 			"response": []
 		},
@@ -98,19 +102,25 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:5050/v1/todos/update",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"v1",
-						"todos",
-						"update"
-					]
-				}
+				"url": "http://localhost:5050/v1/todos/update"
+			},
+			"response": []
+		},
+		{
+			"name": "Update-TodoMark",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"todoId\": 1,\n    \"newTask\": \"Trinken\",\n    \"newIsDone\": true,\n    \"newDueDate\": \"2025-10-10\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5050/v1/todos/update"
 			},
 			"response": []
 		},
@@ -128,19 +138,7 @@
 						}
 					}
 				},
-				"url": {
-					"raw": "http://localhost:5050/v1/todos/delete",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "5050",
-					"path": [
-						"v1",
-						"todos",
-						"delete"
-					]
-				}
+				"url": "http://localhost:5050/v1/todos/delete"
 			},
 			"response": []
 		}
